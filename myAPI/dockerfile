@@ -1,0 +1,19 @@
+FROM golang:alpine
+
+EXPOSE 8081:8081
+
+
+WORKDIR /app 
+
+COPY go.mod go.sum ./
+
+# download dependency go
+RUN go mod download
+
+# salin kode sumber aplikasi ke dalam container
+COPY . .
+
+RUN go build -o myapp cmd/api/main.go
+
+# menjalankan aplikasi saat container dijalankan
+ENTRYPOINT go run .
