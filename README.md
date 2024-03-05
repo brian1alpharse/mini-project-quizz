@@ -10,4 +10,7 @@ Gorm
 
 Fitur yang Ditambahkan padaa Frontend ReactJS:
 react-router-dom
-tailwind css
+tailwind-css
+
+Fitur yang ditambahkan pada Mobile React Native
+Stack-Navigator
